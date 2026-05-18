@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Caveat:wght@400;600&display=swap');
+
+.wall {
+  background: url(/background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.overlay {
+  min-height: 100vh;
+  background: rgba(30, 15, 5, .35);
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  background-color: rgba(0, 0, 0, .45);
+  padding: 12px 28px;
+  color: #dcc7b0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Indie Flower', cursive;
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgba(193, 156, 105, .2);
+}
+
+.topbar h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  text-shadow: 1px 2px 6px rgba(0, 0, 0, .5);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-info span {
+  font-size: 1.1rem;
+  color: #dcc7b0;
+}
+
+.user-info button {
+  background: rgba(193, 156, 105, .85);
+  padding: 6px 16px;
+  font-size: 1rem;
+  border: 1px solid #a67c52;
+  border-radius: 8px;
+  color: #3b2510;
+  cursor: pointer;
+  font-family: 'Indie Flower', cursive;
+  font-weight: 600;
+  transition: .2s;
+
+  &:hover {
+    background: #a67c52;
+  }
+}
+
+.new-note-bar {
+  display: flex;
+  justify-content: center;
+  padding: 22px 0 10px;
+}
+
+.new-note-btn {
+  background: rgba(193, 156, 105, .9);
+  border: none;
+  border-radius: 12px;
+  padding: 10px 28px;
+  font-size: 1.1rem;
+  font-family: 'Indie Flower', cursive;
+  color: #3b2510;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, .35);
+  transition: .2s;
+
+  &:hover {
+    background: #a67c52;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .45);
+  }
+}
+
+.form-overlay {
+  display: flex;
+  justify-content: center;
+  padding: 20px 16px 0;
+}
+
+.note-form {
+  background: #fffef7;
+  border-radius: 4px;
+  padding: 24px 28px 20px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, .45), 0 2px 8px rgba(0, 0, 0, .2);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-family: 'Caveat', cursive;
+}
+
+.form-title {
+  font-size: 1.4rem;
+  color: #553c23;
+  font-family: 'Indie Flower', cursive;
+  text-align: center;
+}
+
+.note-input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #c19c6955;
+  padding: 8px 4px;
+  font-size: 1.15rem;
+  font-family: 'Caveat', cursive;
+  color: #3b2510;
+  background: transparent;
+  outline: none;
+  transition: .2s;
+
+  &:focus {
+    border-bottom-color: #c19c69;
+  }
+}
+
+.note-textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #c19c6955;
+  padding: 8px 4px;
+  font-size: 1.05rem;
+  font-family: 'Caveat', cursive;
+  color: #3b2510;
+  background: transparent;
+  outline: none;
+  resize: vertical;
+  transition: .2s;
+
+  &:focus {
+    border-bottom-color: #c19c69;
+  }
+}
+
+.color-picker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.color-label {
+  font-size: 1rem;
+  color: #7a5c3a;
+}
+
+.colors {
+  display: flex;
+  gap: 8px;
+}
+
+.color-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: .15s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.save-btn {
+  background: #c19c69;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1rem;
+  color: #3b2510;
+  cursor: pointer;
+  font-weight: 600;
+  transition: .2s;
+
+  &:hover {
+    background: #a67c52;
+  }
+}
+
+.cancel-btn {
+  background: transparent;
+  border: 1px solid #c19c6988;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1rem;
+  color: #7a5c3a;
+  cursor: pointer;
+  transition: .2s;
+
+  &:hover {
+    background: rgba(193, 156, 105, .15);
+  }
+}
+
+.error-message {
+  text-align: center;
+  color: #f87171;
+  font-family: 'Caveat', cursive;
+  font-size: 1.1rem;
+  padding: 8px;
+  background: rgba(0, 0, 0, .3);
+  margin: 8px 24px;
+  border-radius: 6px;
+}
+
+.notes-wall {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 0 60px;
+  gap: 48px;
+}
+
+.rope-row {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.rope-section {
+  position: relative;
+  height: 0;
+  z-index: 2;
+}
+
+.rope-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.cards-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 28px;
+  padding: 0 32px;
+  padding-top: 12px;
+}
+
+.card-hang {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.pin {
+  position: relative;
+  z-index: 3;
+  width: 14px;
+  height: 24px;
+  background: linear-gradient(160deg, #e0b84a 0%, #9a6e12 60%, #6b4a0a 100%);
+  border-radius: 3px 3px 6px 6px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, .55);
+  flex-shrink: 0;
+  margin-bottom: -8px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 12px;
+    background: rgba(0, 0, 0, .25);
+    border-radius: 1px;
+  }
+}
+
+.note-card {
+  width: 180px;
+  background: #fffef7;
+  border-radius: 2px;
+  box-shadow: 2px 5px 16px rgba(0, 0, 0, .5), 0 2px 4px rgba(0, 0, 0, .2);
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  transition: transform .22s ease, box-shadow .22s ease;
+  cursor: default;
+
+  &:hover {
+    transform: rotate(0deg) scale(1.08) !important;
+    box-shadow: 4px 12px 32px rgba(0, 0, 0, .65), 0 4px 8px rgba(0, 0, 0, .3);
+    z-index: 10;
+  }
+}
+
+.card-photo {
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+}
+
+.card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  padding: 10px 12px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card-title {
+  font-family: 'Indie Flower', cursive;
+  font-size: 1rem;
+  color: #3b2510;
+  line-height: 1.2;
+}
+
+.card-content {
+  font-family: 'Caveat', cursive;
+  font-size: .88rem;
+  color: #6b4c30;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  border-top: 1px solid #e8e0cc;
+  padding-top: 5px;
+}
+
+.card-date {
+  font-family: 'Caveat', cursive;
+  font-size: .75rem;
+  color: #a08060;
+}
+
+.card-actions {
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: .2s;
+}
+
+.note-card:hover .card-actions {
+  opacity: 1;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: .85rem;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: .15s;
+
+  &:hover {
+    background: rgba(0, 0, 0, .07);
+  }
+}
+
+.empty {
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.4rem;
+  color: #dcc7b0cc;
+  text-align: center;
+  width: 100%;
+  margin-top: 60px;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+}
