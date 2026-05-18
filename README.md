@@ -4,6 +4,10 @@ A simple notes app with user authentication.
 
 **Stack:** React, Fastify, SQLite3
 
+## Preview
+
+![Notes App Preview](./preview.png)
+
 ## Getting Started
 
 1. Install dependencies:
