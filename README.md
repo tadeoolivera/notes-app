@@ -6,7 +6,7 @@ A simple notes app with user authentication.
 
 ## Preview
 
-![Notes App Preview](./preview.png)
+![Notes App Preview](./public/preview.png)
 
 ## Getting Started
 
